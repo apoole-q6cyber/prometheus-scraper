@@ -27,3 +27,7 @@ jobs:
 
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    - name: Self-hosted Renovate
+      uses: renovatebot/github-action@v43.0.8
+      with:
+        token: ${{ secrets.RENOVATE_TOKEN }}
